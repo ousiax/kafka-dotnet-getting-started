@@ -1,0 +1,11 @@
+version: "2.4"
+services:
+  schema-registry:
+    container_name: schema-registry
+    user: appuser:appuser
+    image: confluentinc/cp-schema-registry:7.5.3
+    restart: "on-failure:15"
+    ports:
+      - "8081:8081"
+    environment:
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
