@@ -244,3 +244,4 @@ public class JsonDeserializer<T> : IAsyncDeserializer<T>, IDeserializer<T>
 * [18] https://avro.apache.org/
 * [19] https://docs.confluent.io/kafka-clients/dotnet/current/overview.html
 * [20] https://www.confluent.io/blog/decoupling-systems-with-apache-kafka-schema-registry-and-avro/
+* [21] https://docs.confluent.io/platform/current/installation/docker/config-reference.html
