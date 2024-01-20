@@ -6,7 +6,7 @@ Confluent develops and maintains [confluent-kafka-dotnet](https://github.com/con
 
 TIP: See [INSTALLATION.md](INSTALLATION.md) to setup a Kafka cluster.
 
-TIP: See [INSTALLATION.DOCKER.md](INSTALLATION.DOCKER.mmd) to setup a Kafka cluster using Docker.
+TIP: See [INSTALLATION.DOCKER.md](INSTALLATION.DOCKER.md) to setup a Kafka cluster using Docker.
 
 TIP: Before starting to pub/sub messages, we might need to create a topic like this:
 
@@ -18,7 +18,7 @@ Created topic Kafka.GetStarted.Simple.
 
 For more information about the `kafka-topics.sh` tool, see `kafka-topics.sh --help`.
 
-we can also let the brokers/clients to create the topics automatically, if the feature is enabled with `auto.create.topics.enable=true` which is true by default.
+We can also let the brokers/clients to create the topics automatically, if the feature is enabled with `auto.create.topics.enable=true` which is true by default.
 
 ## Install the required Nuget packages
 
