@@ -1,0 +1,18 @@
+version: "2.4"
+services:
+  controller:
+    container_name: kafka-controller
+    user: appuser:appuser
+    image: confluentinc/cp-kafka:7.5.3
+    restart: "on-failure:15"
+    ports:
+      - "9093:9093"
+    environment:
+      KAFKA_PROCESS_ROLES: 'controller'
+      KAFKA_LISTENERS: 'CONTROLLER://:9093'
+      KAFKA_CONTROLLER_LISTENER_NAMES: 'CONTROLLER'
+    volumes:
+      - controller:/var/lib/kafka/data:rw
+volumes:
+  controller:
+    name: kafka-controller

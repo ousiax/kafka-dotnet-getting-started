@@ -1,0 +1,15 @@
+version: "2.4"
+services:
+  broker:
+    environment:
+      KAFKA_NODE_ID: 1001
+      KAFKA_ADVERTISED_LISTENERS: 'PLAINTEXT://node-1:9092'
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '3001@node-1:9093,3002@node-2:9093'
+      CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qg'
+      # Set replica factor to be 3 at least on production
+      # KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      # KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      # KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    extra_hosts:
+      - "node-1:192.168.56.131"
+      - "node-2:192.168.56.132"

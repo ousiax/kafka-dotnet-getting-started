@@ -1,0 +1,16 @@
+﻿{
+  "namespace": "Avro.Serdes.Models",
+  "type": "record",
+  "doc": "A simple message type as used by this sample.",
+  "name": "User",
+  "fields": [
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Item",
+      "type": "string"
+    }
+  ]
+}

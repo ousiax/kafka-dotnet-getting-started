@@ -1,0 +1,10 @@
+version: "2.4"
+services:
+  controller:
+    environment:
+      KAFKA_NODE_ID: 3001
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '3001@node-1:9093,3002@node-2:9093'
+      CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qg'
+    extra_hosts:
+      - "node-1:192.168.56.131"
+      - "node-2:192.168.56.132"

@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  kafka-ui:
+    environment:
+      KAFKA_CLUSTERS_0_NAME: iot
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: node-1:9092,node-2:9092
+    extra_hosts:
+      - "node-1:192.168.56.131"
+      - "node-2:192.168.56.132"
