@@ -212,6 +212,35 @@ TIP: The following steps will be demostrated with the following two nodes:
         CurrentVoters:          [3001,3002]
         CurrentObservers:       [1001,1002]
         ```
+7. Optional: Start the Schema Registry
+
+    On node-1:
+
+    * Update the _compose.override.yml_ in _docker/schema-registry/compose.override.yml_:
+
+        ```yml
+        version: "2.4"
+        services:
+          schema-registry:
+            environment:
+              SCHEMA_REGISTRY_HOST_NAME: node-1
+              SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: node-1:9092,node-2:9092
+              SCHEMA_REGISTRY_DEBUG: true
+            extra_hosts:
+              - "node-1:192.168.56.131"
+              - "node-2:192.168.56.132"
+        ```
+      
+    * Start the Schema Registry:
+
+        ```sh
+        cd docker/schema-registry
+        docker compose up -d
+        ```
+
+    On node-2:
+
+    * Repeat the above steps and update the `SCHEMA_REGISTRY_HOST_NAME` with `node-2`.
 
 8. Start the UI Kafka:
 
